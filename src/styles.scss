@@ -1,1 +1,74 @@
-/* You can add global styles to this file, and also import other style files */
+@import 'src/assets/css/theme';
+@import 'src/assets/css/colors';
+@import 'src/assets/css/sizes';
+
+html, body { height: 100%; }
+body {
+    margin: 0;
+    font-family: Roboto, "Avenir", sans-serif;
+    box-sizing: border-box;
+}
+.ns-row{
+    display: flex;
+}
+.ns-column{
+    display: flex;
+    flex-direction: column;
+}
+.ns-align-center{
+    align-items: center;
+}
+.ns-justify-sb {
+    justify-content: space-between;
+}
+.ns-color-blue{
+    color: $color-blue;
+}
+.ns-color-dark-gray{
+    color: $color-dark-gray;
+}
+.ns-color-gray{
+    color: $color-gray;
+}
+.ns-color-red {
+    color: red;
+}
+.ns-font-12{
+    font-size: 12px;
+}
+.ns-font-14{
+    font-size: 14px;
+}
+.ns-font-16{
+    font-size: 16px;
+}
+.ns-font-18{
+    font-size: 18px;
+}
+.ns-font-20{
+    font-size: 20px;
+}
+.ns-font-22{
+    font-size: 22px;
+}
+.ns-font-28{
+    font-size: 28px;
+}
+.ns-cursor-pointer{
+    cursor: pointer;
+}
+.ns-hide-mobile{
+    @media #{$break-tablet-down} {
+        display: none !important;
+    }
+}
+.ns-hide-desktop{
+    @media #{$break-desktop} {
+        display: none !important;
+    }
+}
+
+.mat-drawer.mat-drawer-side {
+    padding: 16px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+}

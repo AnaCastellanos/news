@@ -1,0 +1,35 @@
+<div class="ns-explore">
+    <p class="ns-font-28 ns-color-red">{{('explore' | translate) | uppercase}}</p>
+    <div class="ns-explore-categories ns-row">
+        <div
+            class="ns-explore-category ns-cursor-pointer"
+            (click)="filterByCategory(category)"
+            *ngFor="let category of categories"
+            [ngClass]="{'ns-explore-category-active': filterBy == category}"
+        >
+            <p>{{(category | translate) | titlecase}}</p>
+        </div>
+    </div>
+    <div class="ns-explore-bitcoin ns-row ns-align-center">
+        <div class="ns-row ns-align-center">
+            <mat-form-field appearance="outline">
+                <input (change)="calculate()" [formControl]="quantityBitcoin" matInput placeholder="{{('quantity' | translate) | titlecase}}">
+            </mat-form-field>
+            <p class="ns-font-14">{{('bitcoins' | translate ) | titlecase}}</p>
+        </div>
+        <p class="ns-font-14">{{('price' | translate) | titlecase}} {{currentPrice | currency:'MXN'}}</p>
+    </div>
+    <div class="ns-explore-news ns-row">
+        <div
+            class="ns-explore-new ns-row"
+            *ngFor="let new of news"
+        >
+            <div class="ns-explore-new-image" [style.background-image]="'url(' + new.urlToImage + ')'"></div>
+            <div>
+                <p class="ns-font-12 ns-color-dark-gray">{{new.source.name}}</p>
+                <p class="ns-font-14">{{new.title}}</p>
+                <p class="ns-font-12">{{new.publishedAt | date:'mediumDate'}}</p>
+            </div>
+        </div>
+    </div>
+</div>

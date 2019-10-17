@@ -1,0 +1,27 @@
+mat-sidenav-container{
+    height: 100vh;
+    .sidenav-content-sections{
+        div{
+            mat-icon{
+                margin-right: 8px;
+            }
+        }
+    }
+    .ns-searched-news{
+        flex-wrap: wrap;
+        .ns-searched-new{
+            width: 45%;
+            margin: 16px;
+            .ns-searched-new-image{
+                background-repeat: no-repeat;
+                background-size: contain;
+                background-position: center;
+                min-height: 100px;
+                margin-right: 16px;
+            }
+            div{
+                width: 50%;
+            }
+        }
+    }
+}

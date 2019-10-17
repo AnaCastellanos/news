@@ -1,0 +1,30 @@
+.ns-top{
+    padding: 16px 24px;
+    .ns-top-new{
+        width: 100%;
+        div{
+            width: 50%;
+        }
+    }
+    .ns-top-new-image{
+        min-height: 300px;
+        margin-right: 16px;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+    }
+    .ns-top-news{
+        flex-wrap: wrap;
+        .ns-top-news-new{
+            width: 45%;
+            margin: 16px;
+            div{
+                width: 50%;
+            }
+            .ns-top-new-image{
+                max-height: 100px;
+                min-height: 100px;
+            }
+        }
+    }
+}

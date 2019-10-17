@@ -1,0 +1,22 @@
+<div class="ns-top">
+    <p class="ns-font-28 ns-color-red">{{('top' | translate) | uppercase}}</p>
+    <div class="ns-top-new ns-row ns-align-center" *ngIf="topNew">
+        <div class="ns-top-new-image" [style.background-image]="'url(' + topNew.urlToImage + ')'"></div>
+        <div>
+            <p class="ns-font-12 ns-color-dark-gray">{{topNew.source.name}}</p>
+            <p class="ns-font-18">{{topNew.title}}</p>
+            <p class="ns-font-14">{{topNew.description}}</p>
+            <p class="ns-font-12">{{topNew.publishedAt | date:'mediumDate'}}</p>
+        </div>
+    </div>
+    <div class="ns-top-news ns-row">
+        <div class="ns-top-news-new ns-row ns-align-center" *ngFor="let new of topNews">
+            <div class="ns-top-new-image" [style.background-image]="'url(' + new.urlToImage + ')'"></div>
+            <div>
+                <p class="ns-font-12 ns-color-dark-gray">{{new.source.name}}</p>
+                <p class="ns-font-14">{{new.title}}</p>
+                <p class="ns-font-12">{{new.publishedAt | date:'mediumDate'}}</p>
+            </div>
+        </div>
+    </div>
+</div>

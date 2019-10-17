@@ -1,0 +1,7 @@
+@import '~@angular/material/theming';
+@include mat-core();
+$News-primary: mat-palette($mat-indigo);
+$News-accent: mat-palette($mat-pink, A200, A100, A400);
+$News-warn: mat-palette($mat-red);
+$News-theme: mat-light-theme($News-primary, $News-accent, $News-warn);
+@include angular-material-theme($News-theme);

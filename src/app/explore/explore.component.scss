@@ -1,0 +1,41 @@
+@import 'src/assets/css/colors';
+
+.ns-explore{
+    padding: 16px 24px;
+    .ns-explore-categories{
+        .ns-explore-category{
+            border: 1px solid $color-gray;
+            padding: 0px 16px;
+            border-radius: 16px;
+            margin-right: 16px;
+            &.ns-explore-category-active{
+                background-color: $color-dark-gray;
+                p{
+                    color: white;
+                }
+            }
+        }
+    }
+    .ns-explore-bitcoin{
+        div{
+            margin-right: 32px;
+        }
+    }
+    .ns-explore-news{
+        flex-wrap: wrap;
+        .ns-explore-new{
+            width: 45%;
+            margin: 16px;
+            .ns-explore-new-image{
+                background-repeat: no-repeat;
+                background-size: contain;
+                background-position: center;
+                min-height: 100px;
+                margin-right: 16px;
+            }
+            div{
+                width: 50%;
+            }
+        }
+    }
+}
